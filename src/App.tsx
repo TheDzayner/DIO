@@ -49,7 +49,7 @@ function App() {
         }}
       />
       
-      <main className="p-8 h-[calc(100vh-130px)]">
+      <main className="p-8 min-h-[calc(100vh-130px)]">
         <div className="max-w-[1440px] mx-auto h-full">
           {showHeatmap ? (
             <HeatmapPage onBack={() => setShowHeatmap(false)} />

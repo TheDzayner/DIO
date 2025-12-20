@@ -177,16 +177,17 @@ const ServicesPage: React.FC<ServicesPageProps> = ({
                 </p>
              </div>
              
-             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-[24px] w-full">
+             <div className="flex flex-col md:flex-row gap-[24px] w-full">
                 {internalServices.map((service, index) => (
-                    <ServiceCard 
-                        key={index}
-                        title={service.title}
-                        description={service.description}
-                        icon={service.icon}
-                        status={service.status}
-                        onClick={service.onClick}
-                    />
+                    <div key={index} className="flex-1">
+                        <ServiceCard 
+                            title={service.title}
+                            description={service.description}
+                            icon={service.icon}
+                            status={service.status}
+                            onClick={service.onClick}
+                        />
+                    </div>
                 ))}
              </div>
         </div>
@@ -202,7 +203,7 @@ const ServicesPage: React.FC<ServicesPageProps> = ({
                 </p>
              </div>
              
-             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-[24px] w-full">
+             <div className="grid grid-cols-1 md:grid-cols-2 gap-[24px] w-full">
                 {externalServices.map((service, index) => (
                     <ServiceCard 
                         key={index}
@@ -210,7 +211,6 @@ const ServicesPage: React.FC<ServicesPageProps> = ({
                         description={service.description}
                         icon={service.icon}
                         status={service.status}
-                        onClick={service.onClick}
                     />
                 ))}
              </div>

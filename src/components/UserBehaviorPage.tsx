@@ -31,6 +31,18 @@ const UserBehaviorPage: React.FC<UserBehaviorPageProps> = ({ onBack, productName
     { id: 6, exit: '/contact', entry: '/homepage', referrer: 'Apple.com', duration: '02:25', pages: 36, actions: 12, country: 'فرانسه', user: '4e2df2c (new)', date: '۱۲ مهر، ۰۴' },
     { id: 7, exit: '/contact', entry: '/homepage', referrer: 'Apple.com', duration: '02:25', pages: 36, actions: 12, country: 'فرانسه', user: '4e2df2c (new)', date: '۱۲ مهر، ۰۴' },
     { id: 8, exit: '/contact', entry: '/homepage', referrer: 'Apple.com', duration: '02:25', pages: 36, actions: 12, country: 'فرانسه', user: '4e2df2c (new)', date: '۱۲ مهر، ۰۴' },
+    { id: 9, exit: '/contact', entry: '/homepage', referrer: 'Apple.com', duration: '02:25', pages: 36, actions: 12, country: 'فرانسه', user: '4e2df2c (new)', date: '۱۲ مهر، ۰۴' },
+    { id: 10, exit: '/contact', entry: '/homepage', referrer: 'Apple.com', duration: '02:25', pages: 36, actions: 12, country: 'فرانسه', user: '4e2df2c (new)', date: '۱۲ مهر، ۰۴' },
+    { id: 11, exit: '/contact', entry: '/homepage', referrer: 'Apple.com', duration: '02:25', pages: 36, actions: 12, country: 'فرانسه', user: '4e2df2c (new)', date: '۱۲ مهر، ۰۴' },
+    { id: 12, exit: '/contact', entry: '/homepage', referrer: 'Apple.com', duration: '02:25', pages: 36, actions: 12, country: 'فرانسه', user: '4e2df2c (new)', date: '۱۲ مهر، ۰۴' },
+    { id: 13, exit: '/contact', entry: '/homepage', referrer: 'Apple.com', duration: '02:25', pages: 36, actions: 12, country: 'فرانسه', user: '4e2df2c (new)', date: '۱۲ مهر، ۰۴' },
+    { id: 14, exit: '/contact', entry: '/homepage', referrer: 'Apple.com', duration: '02:25', pages: 36, actions: 12, country: 'فرانسه', user: '4e2df2c (new)', date: '۱۲ مهر، ۰۴' },
+    { id: 15, exit: '/contact', entry: '/homepage', referrer: 'Apple.com', duration: '02:25', pages: 36, actions: 12, country: 'فرانسه', user: '4e2df2c (new)', date: '۱۲ مهر، ۰۴' },
+    { id: 16, exit: '/contact', entry: '/homepage', referrer: 'Apple.com', duration: '02:25', pages: 36, actions: 12, country: 'فرانسه', user: '4e2df2c (new)', date: '۱۲ مهر، ۰۴' },
+    { id: 17, exit: '/contact', entry: '/homepage', referrer: 'Apple.com', duration: '02:25', pages: 36, actions: 12, country: 'فرانسه', user: '4e2df2c (new)', date: '۱۲ مهر، ۰۴' },
+    { id: 18, exit: '/contact', entry: '/homepage', referrer: 'Apple.com', duration: '02:25', pages: 36, actions: 12, country: 'فرانسه', user: '4e2df2c (new)', date: '۱۲ مهر، ۰۴' },
+    { id: 19, exit: '/contact', entry: '/homepage', referrer: 'Apple.com', duration: '02:25', pages: 36, actions: 12, country: 'فرانسه', user: '4e2df2c (new)', date: '۱۲ مهر، ۰۴' },
+    { id: 20, exit: '/contact', entry: '/homepage', referrer: 'Apple.com', duration: '02:25', pages: 36, actions: 12, country: 'فرانسه', user: '4e2df2c (new)', date: '۱۲ مهر، ۰۴' },
   ];
 
   return (
@@ -66,18 +78,18 @@ const UserBehaviorPage: React.FC<UserBehaviorPageProps> = ({ onBack, productName
         <div className="flex flex-col gap-4 w-full mt-2">
             <div className="flex items-center justify-between w-full">
                  <div className="flex items-center gap-4">
-                    <div className="flex flex-col items-end gap-1.5 w-[320px]">
-                        <span className="text-[#414651] text-[14px] font-medium">انتخاب بخش‌ها</span>
-                        <button className="flex items-center justify-between w-full px-3 py-1.5 bg-white border border-[#d5d7da] rounded-[10px] shadow-sm">
-                            <img src={ASSETS.imgArrowDown} alt="" className="w-5 h-5 opacity-50" />
-                            <span className="text-[#414651] text-[15px] font-medium">همه</span>
-                        </button>
-                    </div>
                     <div className="flex flex-col items-start justify-start gap-1.5 w-[320px]">
                         <span className="text-[#414651] text-[14px] font-medium">دوره:</span>
                         <button className="flex items-center justify-end gap-2 w-full px-3 py-2 bg-white border border-[#d5d7da] rounded-[10px]">
                             <span className="text-[#181d27] text-[14px] font-medium">۱۲ مهر ۱۴۰۴ - ۲۳ مهر ۱۴۰۴</span>
                             <img src={ASSETS.imgCalendar} alt="" className="w-5 h-5 opacity-50" />
+                        </button>
+                    </div>
+                    <div className="flex flex-col items-end gap-1.5 w-[320px]">
+                        <span className="text-[#414651] text-[14px] font-medium">انتخاب بخش‌ها</span>
+                        <button className="flex items-center justify-between w-full px-3 py-1.5 bg-white border border-[#d5d7da] rounded-[10px] shadow-sm">
+                            <img src={ASSETS.imgArrowDown} alt="" className="w-5 h-5 opacity-50" />
+                            <span className="text-[#414651] text-[15px] font-medium">همه</span>
                         </button>
                     </div>
                  </div>
