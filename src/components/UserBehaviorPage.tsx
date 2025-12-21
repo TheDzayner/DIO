@@ -85,7 +85,7 @@ const UserBehaviorPage: React.FC<UserBehaviorPageProps> = ({ onBack, productName
                             <img src={ASSETS.imgCalendar} alt="" className="w-5 h-5 opacity-50" />
                         </button>
                     </div>
-                    <div className="flex flex-col items-end gap-1.5 w-[320px]">
+                    <div className="flex flex-col items-start justify-start gap-1.5 w-[320px]">
                         <span className="text-[#414651] text-[14px] font-medium">انتخاب بخش‌ها</span>
                         <button className="flex items-center justify-between w-full px-3 py-1.5 bg-white border border-[#d5d7da] rounded-[10px] shadow-sm">
                             <img src={ASSETS.imgArrowDown} alt="" className="w-5 h-5 opacity-50" />
