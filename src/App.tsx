@@ -16,9 +16,7 @@ interface Product {
 function App() {
   const [activeTab, setActiveTab] = useState<'products' | 'dashboard'>('products');
   const [isAddModalOpen, setIsAddModalOpen] = useState(false);
-  const [products, setProducts] = useState<Product[]>([
-    { id: '1', name: 'ویپاد' }
-  ]);
+  const [products, setProducts] = useState<Product[]>([]);
   const [selectedProductId, setSelectedProductId] = useState<string | null>(null);
   const [showHeatmap, setShowHeatmap] = useState(false);
   const [showUserBehavior, setShowUserBehavior] = useState(false);

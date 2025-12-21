@@ -7,7 +7,7 @@ export const ASSETS = {
   imgNotification: "/icons/notification.svg",
   imgProfile: "/icons/profile.svg",
   imgArrowDown: "/icons/arrow-down.svg",
-  imgLogo: "/icons/icon/dio logo.svg",
+  imgLogo: "/icons/icon/dio-logo.svg",
   imgProductsEmpty: "/icons/products-empty.svg",
   imgAddCircle: "/icons/add-circle.svg",
   imgClose: "/icons/close.svg",
