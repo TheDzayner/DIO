@@ -106,7 +106,12 @@ export const LoginPage: React.FC<LoginPageProps> = ({ onLogin, onSignUp }) => {
              {/* Sign Up Footer */}
              <div className="flex items-center justify-start gap-[8px]">
                <span className="font-['IRANYekanX'] font-medium text-[14px] text-[#535862]">حساب کاربری ندارید؟</span>
-               <Button variant="secondary" size="sm" className="bg-[#ebf1ff] text-[#004eeb]">
+               <Button 
+                 variant="secondary" 
+                 size="sm" 
+                 className="bg-[#ebf1ff] text-[#004eeb]"
+                 onClick={onSignUp}
+               >
                  ثبت نام
                </Button>
              </div>

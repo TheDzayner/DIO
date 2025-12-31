@@ -8,6 +8,8 @@ import HeatmapPage from './components/HeatmapPage';
 import ServicesPage from './components/ServicesPage';
 import UserBehaviorPage from './components/UserBehaviorPage';
 import LoginPage from './components/LoginPage';
+import SignUpPage from './components/SignUpPage';
+import OTPVerificationPage from './components/OTPVerificationPage';
 
 interface Product {
   id: string;
@@ -16,6 +18,8 @@ interface Product {
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [authView, setAuthView] = useState<'login' | 'signup' | 'otp'>('login');
+  const [email, setEmail] = useState('');
   const [activeTab, setActiveTab] = useState<'products' | 'dashboard'>('products');
   const [isAddModalOpen, setIsAddModalOpen] = useState(false);
   const [products, setProducts] = useState<Product[]>([]);
@@ -35,7 +39,36 @@ function App() {
   const selectedProduct = products.find(p => p.id === selectedProductId);
 
   if (!isLoggedIn) {
-    return <LoginPage onLogin={() => setIsLoggedIn(true)} />;
+    if (authView === 'signup') {
+      return (
+        <SignUpPage 
+          onLogin={() => setAuthView('login')} 
+          onContinue={(email) => {
+            setEmail(email);
+            setAuthView('otp');
+          }}
+        />
+      );
+    }
+    if (authView === 'otp') {
+      return (
+        <OTPVerificationPage 
+          email={email}
+          onBack={() => setAuthView('signup')}
+          onContinue={() => {
+            // Here we would validate the OTP
+            // For now, let's just log the user in
+            setIsLoggedIn(true);
+          }}
+        />
+      );
+    }
+    return (
+      <LoginPage 
+        onLogin={() => setIsLoggedIn(true)} 
+        onSignUp={() => setAuthView('signup')} 
+      />
+    );
   }
 
   return (
