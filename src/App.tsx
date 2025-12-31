@@ -7,6 +7,7 @@ import ProductDetailsPage from './components/ProductDetailsPage';
 import HeatmapPage from './components/HeatmapPage';
 import ServicesPage from './components/ServicesPage';
 import UserBehaviorPage from './components/UserBehaviorPage';
+import LoginPage from './components/LoginPage';
 
 interface Product {
   id: string;
@@ -14,6 +15,7 @@ interface Product {
 }
 
 function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [activeTab, setActiveTab] = useState<'products' | 'dashboard'>('products');
   const [isAddModalOpen, setIsAddModalOpen] = useState(false);
   const [products, setProducts] = useState<Product[]>([]);
@@ -31,6 +33,10 @@ function App() {
   };
 
   const selectedProduct = products.find(p => p.id === selectedProductId);
+
+  if (!isLoggedIn) {
+    return <LoginPage onLogin={() => setIsLoggedIn(true)} />;
+  }
 
   return (
     <div className="min-h-screen bg-bg-page">

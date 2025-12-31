@@ -33,4 +33,6 @@ export const ASSETS = {
   imgRecording: "/icons/recording.svg",
   imgPlay: "/icons/icon/play.svg",
   imgBazarOwner: "/icons/bazar-owner.svg",
+  imgPodLogo: "/icons/icon/pod logo.svg",
+  imgGoogleLogo: "/icons/icon/google logo.svg",
 };
