@@ -6,10 +6,11 @@ export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> 
   error?: string;
   helperText?: string;
   containerClassName?: string;
+  endIcon?: React.ReactNode;
 }
 
 const Input = React.forwardRef<HTMLInputElement, InputProps>(
-  ({ className, containerClassName, label, error, helperText, type, ...props }, ref) => {
+  ({ className, containerClassName, label, error, helperText, type, endIcon, ...props }, ref) => {
     return (
       <div className={cn("flex flex-col gap-[8px] w-full", containerClassName)}>
         {label && (
@@ -31,6 +32,11 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
             ref={ref}
             {...props}
           />
+          {endIcon && (
+            <div className="mr-2 flex items-center justify-center">
+              {endIcon}
+            </div>
+          )}
         </div>
         {(error || helperText) && (
           <p className={cn(
@@ -48,4 +54,5 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
 Input.displayName = "Input";
 
 export default Input;
+
 

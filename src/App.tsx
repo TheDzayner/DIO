@@ -10,6 +10,8 @@ import UserBehaviorPage from './components/UserBehaviorPage';
 import LoginPage from './components/LoginPage';
 import SignUpPage from './components/SignUpPage';
 import OTPVerificationPage from './components/OTPVerificationPage';
+import CompleteProfilePage from './components/CompleteProfilePage';
+import OrganizationInfoPage from './components/OrganizationInfoPage';
 
 interface Product {
   id: string;
@@ -18,7 +20,7 @@ interface Product {
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [authView, setAuthView] = useState<'login' | 'signup' | 'otp'>('login');
+  const [authView, setAuthView] = useState<'login' | 'signup' | 'otp' | 'complete-profile' | 'organization-info'>('login');
   const [email, setEmail] = useState('');
   const [activeTab, setActiveTab] = useState<'products' | 'dashboard'>('products');
   const [isAddModalOpen, setIsAddModalOpen] = useState(false);
@@ -56,8 +58,28 @@ function App() {
           email={email}
           onBack={() => setAuthView('signup')}
           onContinue={() => {
-            // Here we would validate the OTP
-            // For now, let's just log the user in
+            // After OTP, go to complete profile
+            setAuthView('complete-profile');
+          }}
+        />
+      );
+    }
+    if (authView === 'complete-profile') {
+      return (
+        <CompleteProfilePage 
+          email={email}
+          onBack={() => setAuthView('otp')}
+          onContinue={() => {
+            setAuthView('organization-info');
+          }}
+        />
+      );
+    }
+    if (authView === 'organization-info') {
+      return (
+        <OrganizationInfoPage 
+          onBack={() => setAuthView('complete-profile')}
+          onContinue={() => {
             setIsLoggedIn(true);
           }}
         />

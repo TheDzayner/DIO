@@ -1,22 +1,16 @@
 import React from 'react';
 
-// Remote assets from Figma
-const img = "https://www.figma.com/api/mcp/asset/d37939d6-7924-4ef7-aea4-8cd0ff868c48";
-const imgEllipse8 = "https://www.figma.com/api/mcp/asset/d4a52d61-2f36-4296-885f-bc0537faf766";
-const imgEllipse9 = "https://www.figma.com/api/mcp/asset/f5b5e435-488a-492e-b5e4-839c06e3912d";
-const imgFrame48098882 = "https://www.figma.com/api/mcp/asset/7c3e86b0-5f3d-4917-a15d-eb2039820ddc";
-const imgGroup15 = "https://www.figma.com/api/mcp/asset/2dd89078-4f06-4c7d-be57-8df54c388d7b";
-const imgGroup18 = "https://www.figma.com/api/mcp/asset/5386282a-0848-4f3d-b4c2-481215e8f928";
-const imgGroup3 = "https://www.figma.com/api/mcp/asset/2fbea200-7beb-4915-9fde-d196cc71a962";
-const imgGroup14 = "https://www.figma.com/api/mcp/asset/eb3f9b30-2dfc-4666-9f9e-3b4679046f7e";
-const imgGroup17 = "https://www.figma.com/api/mcp/asset/616afbf7-ac72-44bb-9cf8-0b7b40fc9d36";
-const imgGroup16 = "https://www.figma.com/api/mcp/asset/44409cc9-47e0-4a95-b4d3-69c166157a36";
+const imgEllipse8 = "https://www.figma.com/api/mcp/asset/453f3d8d-ba20-488c-bd03-53465211602e";
+const imgEllipse9 = "https://www.figma.com/api/mcp/asset/6e4a41c0-d770-49bf-85d6-ae29f35c2e33";
+const imgEllipse16 = "https://www.figma.com/api/mcp/asset/1498e291-d6ac-4469-ae82-b98499fd6185";
+const imgEllipse17 = "https://www.figma.com/api/mcp/asset/67fb4d96-ed95-4501-88e6-5a6959cfe697";
+const imgUnion = "https://www.figma.com/api/mcp/asset/725365f5-0080-4643-8088-13166f886645";
 
-interface LoginIllustrationProps {
+interface CompleteProfileIllustrationProps {
   className?: string;
 }
 
-export const LoginIllustration: React.FC<LoginIllustrationProps> = ({ className }) => {
+export const CompleteProfileIllustration: React.FC<CompleteProfileIllustrationProps> = ({ className }) => {
   return (
     <div className={className}>
       <div className="absolute h-[336px] left-[-29px] top-0 w-[393px]">
@@ -74,43 +68,31 @@ export const LoginIllustration: React.FC<LoginIllustrationProps> = ({ className 
         </div>
       </div>
       <div className="absolute contents left-[calc(50%-3.38px)] top-1/2 translate-x-[-50%] translate-y-[-50%]">
-        <div className="absolute bg-gradient-to-b from-[#ffffff] h-[116px] left-[calc(50%-3px)] rounded-bl-[16px] rounded-br-[16px] to-[rgba(255,255,255,0.2)] top-[calc(50%+20px)] translate-x-[-50%] translate-y-[-50%] w-[186px]">
-          <div className="absolute inset-0 pointer-events-none shadow-[inset_0px_8px_4px_0px_white,inset_0px_-4px_4px_0px_rgba(6,85,192,0.4)]" />
-        </div>
-        <div className="absolute bg-gradient-to-b from-[rgba(6,85,192,0.3)] h-[32px] left-[calc(50%-3px)] rounded-tl-[16px] rounded-tr-[16px] to-[rgba(255,255,255,0.2)] top-[calc(50%-62px)] translate-x-[-50%] translate-y-[-50%] w-[186px]">
-          <div className="absolute inset-0 pointer-events-none shadow-[inset_0px_2px_4px_0px_rgba(6,85,192,0.2),inset_0px_-2px_4px_0px_rgba(6,85,192,0.4)]" />
-        </div>
-        <div className="absolute h-[12px] left-[calc(50%-62px)] top-[calc(50%-57px)] translate-x-[-50%] translate-y-[-50%] w-[46px]">
-          <img className="block max-w-none size-full" alt="" src={imgFrame48098882} />
-        </div>
-        <div className="absolute h-[51.467px] left-[calc(50%-119.51px)] top-[calc(50%-17.27px)] translate-x-[-50%] translate-y-[-50%] w-[28.981px]">
-          <img className="block max-w-none size-full" alt="" src={imgGroup15} />
-        </div>
-        <div className="absolute flex h-[40.467px] items-center justify-center left-[calc(50%+111.49px)] top-[calc(50%-46.77px)] translate-x-[-50%] translate-y-[-50%] w-[22.787px]">
-          <div className="flex-none rotate-[180deg] scale-y-[-100%]">
-            <div className="h-[40.467px] relative w-[22.787px]">
-              <img className="block max-w-none size-full" alt="" src={imgGroup18} />
-            </div>
+        <div className="absolute h-[99px] left-[calc(50%-3.5px)] mix-blend-multiply top-[calc(50%+110.5px)] translate-x-[-50%] translate-y-[-50%] w-[159px]">
+          <div className="absolute inset-[-101.01%_-62.89%]">
+            <img className="block max-w-none size-full" alt="" src={imgEllipse16} />
           </div>
         </div>
-        <div className="absolute h-[50.743px] left-[calc(50%-3px)] top-[calc(50%+19.83px)] translate-x-[-50%] translate-y-[-50%] w-[48px]">
-          <img className="block max-w-none size-full" alt="" src={imgGroup3} />
-        </div>
-        <div className="absolute h-[88.794px] left-[calc(50%-143px)] top-[calc(50%+23.73px)] translate-x-[-50%] translate-y-[-50%] w-[50px]">
-          <img className="block max-w-none size-full" alt="" src={imgGroup14} />
-        </div>
-        <div className="absolute flex h-[71.467px] items-center justify-center left-[calc(50%+141.12px)] top-[calc(50%+4.73px)] translate-x-[-50%] translate-y-[-50%] w-[40.243px]">
-          <div className="flex-none rotate-[180deg] scale-y-[-100%]">
-            <div className="h-[71.467px] relative w-[40.243px]">
-              <img className="block max-w-none size-full" alt="" src={imgGroup17} />
-            </div>
+        <div className="absolute left-[calc(50%-2px)] mix-blend-multiply size-[94px] top-[calc(50%-4px)] translate-x-[-50%] translate-y-[-50%]">
+          <div className="absolute inset-[-89.36%]">
+            <img className="block max-w-none size-full" alt="" src={imgEllipse17} />
           </div>
         </div>
-        <div className="absolute flex h-[51.467px] items-center justify-center left-[calc(50%+92.49px)] top-[calc(50%+40.73px)] translate-x-[-50%] translate-y-[-50%] w-[28.981px]">
-          <div className="flex-none rotate-[180deg] scale-y-[-100%]">
-            <div className="h-[51.467px] relative w-[28.981px]">
-              <img className="block max-w-none size-full" alt="" src={imgGroup16} />
-            </div>
+        <div className="absolute h-[138px] left-[calc(50%-3px)] rounded-[96px] top-[calc(50%-91px)] translate-x-[-50%] translate-y-[-50%] w-[108px]" />
+        <div className="absolute h-[138px] left-[calc(50%-3px)] rounded-[96px] top-[calc(50%-91px)] translate-x-[-50%] translate-y-[-50%] w-[108px]">
+          <div className="absolute inset-0 pointer-events-none shadow-[inset_0px_-20px_16px_0px_rgba(6,85,192,0.32)]" />
+        </div>
+        <div className="absolute h-[190.553px] left-[calc(50%-3.38px)] top-[calc(50%+43.28px)] translate-x-[-50%] translate-y-[-50%] w-[189.238px]">
+          <img className="block max-w-none size-full" alt="" src={imgUnion} />
+        </div>
+        <div className="absolute flex h-[37px] items-center justify-center left-[calc(50%-65px)] top-[calc(50%-90.5px)] translate-x-[-50%] translate-y-[-50%] w-[16px]">
+          <div className="flex-none scale-y-[-100%]">
+            <div className="bg-gradient-to-b from-[rgba(119,159,220,0)] h-[37px] rounded-bl-[12px] rounded-tl-[12px] to-[#779fdc] w-[16px]" />
+          </div>
+        </div>
+        <div className="absolute flex h-[36px] items-center justify-center left-[calc(50%+59px)] top-[calc(50%-91px)] translate-x-[-50%] translate-y-[-50%] w-[16px]">
+          <div className="flex-none rotate-[180deg]">
+            <div className="bg-gradient-to-b from-[rgba(119,159,220,0)] h-[36px] rounded-bl-[12px] rounded-tl-[12px] to-[#779fdc] w-[16px]" />
           </div>
         </div>
       </div>
@@ -118,7 +100,6 @@ export const LoginIllustration: React.FC<LoginIllustrationProps> = ({ className 
   );
 };
 
-export default LoginIllustration;
-
+export default CompleteProfileIllustration;
 
 
